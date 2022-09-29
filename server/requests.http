@@ -1,0 +1,18 @@
+@API=http://localhost:8000
+
+### All planets
+GET {{API}}/planets
+
+### All Launches
+GET {{API}}/launches
+
+### Add new launch
+POST {{API}}/launches
+Content-Type: application/json
+
+{
+    "mission": "ZTM155",
+    "rocket": "ZTM Experimental IS2",
+    "target": "Kepler-62 f",
+    "launchDate": "February 23, 2030"
+}

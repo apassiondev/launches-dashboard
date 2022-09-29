@@ -1,0 +1,10 @@
+{
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.5,
+  "editor.snippetSuggestions": "bottom",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "terminal.integrated.fontSize": 13,
+  "cSpell.words": ["insol", "prad"]
+}
