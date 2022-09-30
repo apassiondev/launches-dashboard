@@ -12,7 +12,7 @@
     "test": "npm run test:app && npm run test:server",
     "install-server": "npm install --prefix server",
     "install-app": "npm install --prefix  app",
-    "install": "npm run install-server && npm install app",
+    "install": "npm run install-server && npm install-app",
     "deploy": "npm run build --prefix app && npm run start --prefix server",
     "deploy-cluster": "npm run build --prefix app && npm run cluster --prefix server"
   },
