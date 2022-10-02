@@ -1,4 +1,4 @@
-const getPath = (path) => `http://localhost:8000/v1/${path}`;
+const getPath = (path) => `v1/${path}`;
 
 async function httpGetPlanets() {
   // TODO: Once API is ready.
