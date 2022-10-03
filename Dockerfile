@@ -9,9 +9,9 @@ COPY package*.json ./
 # New cacheable layer
 # Copy only app/package.json app/package-lock.json
 # Be aware of adding the `/` trailing slash
-COPY client/package*.json app/
+COPY app/package*.json app/
 # New cacheable layer
-# This layer is only re-built if those client's package.json files are updated.
+# This layer is only re-built if those app's package.json files are updated.
 # Otherwise, it uses the cache
 RUN npm run install-app --only=production
 
@@ -21,11 +21,11 @@ COPY server/package*.json server/
 RUN npm run install-server --only=production
 
 # New cacheable layer
-# Copy the `client` source code
-COPY client/ client/
+# Copy the `app` source code
+COPY app/ app/
 # New cacheable layer
-# This is only re-built if there are changes made to the `client` folder
-RUN npm run build --prefix client
+# This is only re-built if there are changes made to the `app` folder
+RUN npm run build --prefix app
 
 # New cacheable layer
 # Copy `server` source code
